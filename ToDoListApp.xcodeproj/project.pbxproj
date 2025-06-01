@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5029C9AF2DEC95C40056F82E /* ci.yml in Resources */ = {isa = PBXBuildFile; fileRef = 5029C9AC2DEC95C40056F82E /* ci.yml */; };
+		5029C9BC2DEC96640056F82E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5029C9BB2DEC96640056F82E /* FirebaseFirestore */; };
+		5029C9BE2DEC96640056F82E /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 5029C9BD2DEC96640056F82E /* FirebaseFirestoreCombine-Community */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5029C9742DEC95680056F82E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +33,7 @@
 		5029C9632DEC95660056F82E /* ToDoListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5029C9732DEC95680056F82E /* ToDoListAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5029C97D2DEC95680056F82E /* ToDoListAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5029C9AC2DEC95C40056F82E /* ci.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ci.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5029C9BC2DEC96640056F82E /* FirebaseFirestore in Frameworks */,
+				5029C9BE2DEC96640056F82E /* FirebaseFirestoreCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +84,7 @@
 		5029C95A2DEC95660056F82E = {
 			isa = PBXGroup;
 			children = (
+				5029C9AE2DEC95C40056F82E /* .github */,
 				5029C9652DEC95660056F82E /* ToDoListApp */,
 				5029C9762DEC95680056F82E /* ToDoListAppTests */,
 				5029C9802DEC95680056F82E /* ToDoListAppUITests */,
@@ -90,6 +100,22 @@
 				5029C97D2DEC95680056F82E /* ToDoListAppUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		5029C9AD2DEC95C40056F82E /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				5029C9AC2DEC95C40056F82E /* ci.yml */,
+			);
+			path = workflows;
+			sourceTree = "<group>";
+		};
+		5029C9AE2DEC95C40056F82E /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				5029C9AD2DEC95C40056F82E /* workflows */,
+			);
+			path = .github;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +138,8 @@
 			);
 			name = ToDoListApp;
 			packageProductDependencies = (
+				5029C9BB2DEC96640056F82E /* FirebaseFirestore */,
+				5029C9BD2DEC96640056F82E /* FirebaseFirestoreCombine-Community */,
 			);
 			productName = ToDoListApp;
 			productReference = 5029C9632DEC95660056F82E /* ToDoListApp.app */;
@@ -195,6 +223,9 @@
 			);
 			mainGroup = 5029C95A2DEC95660056F82E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5029C9BA2DEC96640056F82E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5029C9642DEC95660056F82E /* Products */;
 			projectDirPath = "";
@@ -212,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5029C9AF2DEC95C40056F82E /* ci.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +584,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5029C9BA2DEC96640056F82E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5029C9BB2DEC96640056F82E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5029C9BA2DEC96640056F82E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		5029C9BD2DEC96640056F82E /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5029C9BA2DEC96640056F82E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5029C95B2DEC95660056F82E /* Project object */;
 }

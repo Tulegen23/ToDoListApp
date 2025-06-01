@@ -1,17 +1,15 @@
-//
-//  ToDoListAppApp.swift
-//  ToDoListApp
-//
-//  Created by almaty on 01.06.2025.
-//
-
 import SwiftUI
+import FirebaseCore
 
 @main
 struct ToDoListAppApp: App {
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TaskListView()
         }
     }
 }
