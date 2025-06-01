@@ -23,5 +23,4 @@ jobs:
         xcodebuild test \
           -project ToDoListApp.xcodeproj \
           -scheme ToDoListApp \
-          -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
-
+          -destination 'id=11423FF0-DCF3-45E2-885A-9C649FF61873'
